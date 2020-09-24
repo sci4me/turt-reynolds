@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C5D418B-591F-496B-9C93-37CC7FEF3D84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Turt</RootNamespace>
+    <AssemblyName>Turt</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7</LangVersion>
+    <NoWarn>
+    </NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Parser\Tree\Definition\DefNode.cs" />
+    <Compile Include="Parser\Tree\Definition\VarNode.cs" />
+    <Compile Include="Parser\Tree\Expression\BinaryNode.cs" />
+    <Compile Include="Parser\Tree\Expression\CallNode.cs" />
+    <Compile Include="Parser\Tree\Statement\AssignNode.cs" />
+    <Compile Include="Parser\Tree\Statement\BreakNode.cs" />
+    <Compile Include="Parser\Tree\Statement\ContinueNode.cs" />
+    <Compile Include="Parser\Tree\Statement\DotNode.cs" />
+    <Compile Include="Parser\Tree\Statement\ExpressionStatement.cs" />
+    <Compile Include="Parser\Tree\Statement\IfNode.cs" />
+    <Compile Include="Parser\Tree\Expression\ParenNode.cs" />
+    <Compile Include="Parser\Tree\Expression\StringNode.cs" />
+    <Compile Include="Parser\Tree\Expression\UnaryNode.cs" />
+    <Compile Include="Parser\Tree\Statement\PrintNode.cs" />
+    <Compile Include="Parser\Tree\Statement\ReturnNode.cs" />
+    <Compile Include="Runtime\ExecutionEnvironment.cs" />
+    <Compile Include="Lexer\Lexer.cs" />
+    <Compile Include="Lexer\LexException.cs" />
+    <Compile Include="Lexer\Token.cs" />
+    <Compile Include="Lexer\TokenType.cs" />
+    <Compile Include="Parser\ParseException.cs" />
+    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Parser\Tree\BaseNode.cs" />
+    <Compile Include="Parser\Tree\Expression\BoolNode.cs" />
+    <Compile Include="Parser\Tree\Expression\IdentNode.cs" />
+    <Compile Include="Parser\Tree\Expression\NilNode.cs" />
+    <Compile Include="Parser\Tree\Expression\NumberNode.cs" />
+    <Compile Include="Parser\Tree\Statement\BlockNode.cs" />
+    <Compile Include="Parser\Tree\Statement\ColorNode.cs" />
+    <Compile Include="Parser\Tree\Statement\DownNode.cs" />
+    <Compile Include="Parser\Tree\ExpressionNode.cs" />
+    <Compile Include="Parser\Tree\StatementNode.cs" />
+    <Compile Include="Parser\Tree\Statement\GoNode.cs" />
+    <Compile Include="Parser\Tree\Statement\LeftNode.cs" />
+    <Compile Include="Parser\Tree\Statement\RepeatNode.cs" />
+    <Compile Include="Parser\Tree\Statement\RightNode.cs" />
+    <Compile Include="Parser\Tree\Statement\UpNode.cs" />
+    <Compile Include="Parser\Tree\Statement\WidthNode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime\Frame.cs" />
+    <Compile Include="Runtime\Scope.cs" />
+    <Compile Include="Runtime\TurtBool.cs" />
+    <Compile Include="Runtime\TurtNil.cs" />
+    <Compile Include="Runtime\TurtInteger.cs" />
+    <Compile Include="Runtime\TurtProcedure.cs" />
+    <Compile Include="Runtime\TurtString.cs" />
+    <Compile Include="Runtime\TurtValue.cs" />
+    <Compile Include="Util\Extensions.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
